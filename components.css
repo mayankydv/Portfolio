@@ -1,0 +1,602 @@
+/* Components CSS for Mayank Yadav Portfolio */
+
+/* --- Buttons --- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    font-family: var(--font-body);
+    gap: 8px;
+    border: 1px solid transparent;
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    color: #FFFFFF;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-hover);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+.btn-secondary {
+    background-color: var(--primary);
+    color: var(--secondary);
+}
+
+.btn-secondary:hover {
+    opacity: 0.9;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+.btn-outline:hover {
+    background-color: var(--border-color);
+    border-color: var(--text-muted);
+}
+
+.btn-sm {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+}
+
+.btn-lg {
+    padding: 12px 28px;
+    font-size: 1rem;
+}
+
+/* --- Metrics Grid --- */
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+@media (max-width: 900px) {
+    .metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .metrics-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.metric-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 32px 24px;
+    transition: transform var(--transition-normal), border-color var(--transition-normal), box-shadow var(--transition-normal);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.metric-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--card-hover-border);
+    box-shadow: var(--shadow-md);
+}
+
+.metric-value {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--accent);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+}
+
+.metric-label {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+}
+
+.metric-desc {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+/* --- Executive Analytics Dashboard --- */
+.dashboard-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    padding: 24px;
+    margin-bottom: 40px;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.dashboard-title-area {
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-title {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.dashboard-subtitle {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin-top: 2px;
+}
+
+.dashboard-tabs {
+    display: flex;
+    background-color: var(--bg-primary);
+    padding: 4px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+}
+
+.dashboard-tab {
+    padding: 6px 14px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: none;
+    background: none;
+    color: var(--text-secondary);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.dashboard-tab.active {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    box-shadow: var(--shadow-sm);
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+}
+
+@media (max-width: 900px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.chart-viewport {
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 20px;
+    min-height: 280px;
+    position: relative;
+}
+
+.chart-svg {
+    width: 100%;
+    height: 240px;
+    overflow: visible;
+}
+
+.chart-axis-line {
+    stroke: var(--border-color);
+    stroke-width: 1;
+}
+
+.chart-grid-line {
+    stroke: var(--border-color);
+    stroke-width: 1;
+    stroke-dasharray: 4,4;
+}
+
+.chart-line {
+    fill: none;
+    stroke: var(--accent);
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.chart-area {
+    fill: url(#chart-gradient);
+    opacity: 0.15;
+}
+
+.chart-bar {
+    fill: var(--accent);
+    rx: 2;
+    transition: fill var(--transition-fast);
+}
+
+.chart-bar:hover {
+    fill: var(--accent-hover);
+}
+
+.chart-point {
+    fill: var(--bg-secondary);
+    stroke: var(--accent);
+    stroke-width: 2.5;
+    cursor: pointer;
+    transition: transform var(--transition-fast);
+}
+
+.chart-point:hover {
+    transform: scale(1.4);
+}
+
+.chart-axis-text {
+    font-size: 10px;
+    fill: var(--text-secondary);
+    font-family: var(--font-body);
+}
+
+/* Tooltip */
+.chart-tooltip {
+    position: absolute;
+    background-color: var(--primary);
+    color: var(--secondary);
+    padding: 8px 12px;
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    font-weight: 600;
+    pointer-events: none;
+    box-shadow: var(--shadow-md);
+    opacity: 0;
+    transition: opacity var(--transition-fast);
+    transform: translate(-50%, -100%);
+    margin-top: -12px;
+}
+
+/* Dashboard Interactive Control Side */
+.dashboard-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.control-group {
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    padding: 16px;
+    border-radius: var(--radius-md);
+}
+
+.control-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+    display: block;
+}
+
+.control-slider-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.control-slider-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.control-slider {
+    width: 100%;
+    accent-color: var(--accent);
+    cursor: pointer;
+}
+
+.control-result-box {
+    background-color: var(--accent-light);
+    border: 1px solid var(--accent);
+    padding: 16px;
+    border-radius: var(--radius-md);
+    text-align: center;
+    color: var(--text-primary);
+}
+
+.control-result-val {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--accent);
+}
+
+/* --- Case Study Cards --- */
+.case-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+
+@media (max-width: 768px) {
+    .case-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.case-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 380px;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-normal);
+}
+
+.case-card:hover {
+    border-color: var(--card-hover-border);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.case-card-top {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.case-card-title {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.case-card-stats {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--accent);
+    margin: 16px 0;
+    font-family: var(--font-heading);
+}
+
+.case-card-desc {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+}
+
+/* --- Filtering Tabs --- */
+.filter-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 32px;
+}
+
+.filter-tab {
+    background: none;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 8px 16px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.filter-tab:hover, .filter-tab.active {
+    background-color: var(--primary);
+    color: var(--secondary);
+    border-color: var(--primary);
+}
+
+/* --- Evidence Vault List Layout --- */
+.vault-layout {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 32px;
+}
+
+@media (max-width: 768px) {
+    .vault-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+.vault-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.vault-folder-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: left;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.vault-folder-btn svg {
+    color: var(--text-muted);
+    transition: color var(--transition-fast);
+}
+
+.vault-folder-btn:hover, .vault-folder-btn.active {
+    background-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+.vault-folder-btn.active svg {
+    color: var(--accent);
+}
+
+.vault-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.vault-item-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 20px;
+    transition: all var(--transition-fast);
+}
+
+@media (max-width: 600px) {
+    .vault-item-card {
+        grid-template-columns: 1fr;
+    }
+}
+
+.vault-item-card:hover {
+    border-color: var(--card-hover-border);
+}
+
+.vault-item-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.vault-item-title {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.vault-item-desc {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.vault-item-actions {
+    display: flex;
+    gap: 8px;
+}
+
+/* --- Admin CMS Panel Specific --- */
+.admin-shell {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 24px;
+    height: calc(100vh - var(--header-height));
+    overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+    .admin-shell {
+        grid-template-columns: 1fr;
+        height: auto;
+        overflow: visible;
+    }
+}
+
+.admin-editor-panel {
+    padding: 24px;
+    overflow-y: auto;
+    background-color: var(--bg-secondary);
+    border-right: 1px solid var(--border-color);
+}
+
+.admin-preview-panel {
+    padding: 24px;
+    overflow-y: auto;
+    background-color: var(--bg-primary);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.admin-form-section {
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-primary);
+    padding: 20px;
+    border-radius: var(--radius-md);
+    margin-bottom: 24px;
+}
+
+.admin-input-group {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.admin-input-group label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+}
+
+.admin-input-group input, .admin-input-group textarea, .admin-input-group select {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    outline: none;
+    transition: border-color var(--transition-fast);
+}
+
+.admin-input-group input:focus, .admin-input-group textarea:focus {
+    border-color: var(--accent);
+}
+
+.admin-toolbar-cms {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary);
+    color: var(--secondary);
+    padding: 12px 24px;
+    border-radius: var(--radius-md);
+    margin-bottom: 24px;
+}
