@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Mayank Yadav | Business Builder</title>
+    <meta name="description" content="Reach out to Mayank Yadav for Growth, Operations, GTM, Product, and Founder's Office opportunities.">
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="./assets/css/variables.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/components.css">
+    <link rel="stylesheet" href="./assets/css/pages.css">
+    <style>
+        .form-status-modal {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #10B981;
+            color: white;
+            padding: 16px 24px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+            z-index: 3000;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 600;
+            transform: translateY(-100px);
+            opacity: 0;
+            transition: all var(--transition-normal);
+        }
+        .form-status-modal.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- STICKY HEADER -->
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="logo-container">
+                <span class="logo-name" data-cms="hero-name">Mayank Yadav</span>
+                <span class="logo-title">Business Builder</span>
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="launches.html" class="nav-link">Launches</a></li>
+                    <li><a href="revenue.html" class="nav-link">GTM & Revenue</a></li>
+                    <li><a href="product.html" class="nav-link">Product & Automation</a></li>
+                    <li><a href="research.html" class="nav-link">Research</a></li>
+                    <li><a href="demand.html" class="nav-link">Demand Gen</a></li>
+                    <li><a href="process.html" class="nav-link">Process</a></li>
+                    <li><a href="leadership.html" class="nav-link">Leadership</a></li>
+                    <li><a href="proof.html" class="nav-link">Evidence Vault</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-controls">
+                <button class="btn-control search-trigger" aria-label="Search" title="Search (Press '/')">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                </button>
+                <button class="btn-control theme-toggle-btn" aria-label="Toggle Dark Mode" title="Toggle Theme">
+                    <!-- Icon loaded dynamically -->
+                </button>
+                <button class="btn-control mobile-menu-toggle" aria-label="Menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE NAVIGATION OVERLAY -->
+    <div class="mobile-nav-overlay">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+        <a href="launches.html" class="mobile-nav-link">Launches</a>
+        <a href="revenue.html" class="mobile-nav-link">GTM & Revenue</a>
+        <a href="product.html" class="mobile-nav-link">Product & Automation</a>
+        <a href="research.html" class="mobile-nav-link">Research</a>
+        <a href="demand.html" class="mobile-nav-link">Demand Gen</a>
+        <a href="process.html" class="mobile-nav-link">Process</a>
+        <a href="leadership.html" class="mobile-nav-link">Leadership</a>
+        <a href="proof.html" class="mobile-nav-link">Evidence Vault</a>
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+    </div>
+
+    <!-- MAIN BODY -->
+    <main>
+        <section class="reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Let's Connect</span>
+                    <h1 class="section-title">Let's Build Something Meaningful</h1>
+                    <p class="section-intro-desc">Open to conversations regarding executive leadership, operations excellence consultancy, seed-stage marketplace launches, or growth advisory roles.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Information Column -->
+                    <div class="contact-info-panel reveal">
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                            </div>
+                            <div>
+                                <span class="contact-item-title">Email Correspondence</span>
+                                <div><a href="mailto:mayank.yadav@example.com" class="contact-item-value" id="contact-email">mayank.yadav@example.com</a></div>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                            </div>
+                            <div>
+                                <span class="contact-item-title">Mobile Direct</span>
+                                <div><a href="tel:+919876543210" class="contact-item-value" id="contact-phone">+91 98765 43210</a></div>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                            </div>
+                            <div>
+                                <span class="contact-item-title">Executive Professional Profile</span>
+                                <div><a href="https://linkedin.com/in/mayank-yadav" target="_blank" class="contact-item-value" id="contact-linkedin">linkedin.com/in/mayank-yadav</a></div>
+                            </div>
+                        </div>
+
+                        <!-- Simulated Calendly Selector -->
+                        <div class="calendly-placeholder">
+                            <span class="control-label" style="color:var(--accent);">Schedule Brief Call</span>
+                            <p style="font-size:0.75rem; color:var(--text-secondary); margin-top:4px;">Select an active briefing slot in June 2026</p>
+                            <div class="calendly-mock-calendar" id="calendar-days">
+                                <!-- Calendar days loaded dynamically -->
+                            </div>
+                            <div id="booking-time-selector" style="display:none; margin-top:16px;">
+                                <span class="control-label">Select Briefing Time</span>
+                                <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:8px;">
+                                    <button class="btn btn-outline btn-sm time-slot-btn">10:00 AM</button>
+                                    <button class="btn btn-outline btn-sm time-slot-btn">02:30 PM</button>
+                                    <button class="btn btn-outline btn-sm time-slot-btn">04:00 PM</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Input Form Column -->
+                    <div class="contact-form reveal">
+                        <span class="control-label" style="margin-bottom:16px;">Direct Inquiry</span>
+                        <form id="portfolio-contact-form">
+                            <div class="contact-form-grid">
+                                <div class="admin-input-group">
+                                    <label for="form-name">Full Name</label>
+                                    <input type="text" id="form-name" required placeholder="Enter name">
+                                </div>
+                                <div class="admin-input-group">
+                                    <label for="form-email">Corporate Email</label>
+                                    <input type="email" id="form-email" required placeholder="name@company.com">
+                                </div>
+                            </div>
+                            <div class="admin-input-group">
+                                <label for="form-subject">Subject</label>
+                                <input type="text" id="form-subject" required placeholder="Scope of discussion">
+                            </div>
+                            <div class="admin-input-group" style="margin-bottom:24px;">
+                                <label for="form-message">Inquiry Specifications</label>
+                                <textarea id="form-message" required rows="5" placeholder="Outline your project requirements or leadership needs..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width:100%;">
+                                Send Executive Inquiry
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- SUCCESS NOTIFICATION TOAST -->
+    <div id="form-toast" class="form-status-modal">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+        <span id="toast-message">Inquiry Sent Successfully!</span>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="logo-name">Mayank Yadav</span>
+                    <span class="logo-title">Business Builder</span>
+                    <p class="footer-desc">Building systems that scale businesses. Growth, GTM, operations, and product leadership.</p>
+                </div>
+                <div class="footer-links-col">
+                    <span class="footer-col-title">Portfolio Sections</span>
+                    <a href="launches.html" class="footer-link">Launches & Expansion</a>
+                    <a href="revenue.html" class="footer-link">Revenue & GTM</a>
+                    <a href="product.html" class="footer-link">Product & Automation</a>
+                    <a href="process.html" class="footer-link">Process Excellence</a>
+                </div>
+                <div class="footer-links-col">
+                    <span class="footer-col-title">Resources</span>
+                    <a href="proof.html" class="footer-link">Evidence Vault</a>
+                    <a href="research.html" class="footer-link">Market Research</a>
+                    <a href="admin.html" class="footer-link" style="color:var(--accent); font-weight:700;">CMS Live Admin</a>
+                    <a href="contact.html" class="footer-link">Get In Touch</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 Mayank Yadav. All Rights Reserved.</span>
+                <span>Designed for Executive and VC Review.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GLOBAL SEARCH MODAL -->
+    <div id="search-modal" class="search-modal">
+        <div class="search-container">
+            <div class="search-header">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                <input type="text" id="search-input" class="search-input" placeholder="Search metrics, case studies, documents... (Press '/' to open)">
+                <button id="search-close" class="search-close">ESC</button>
+            </div>
+            <div id="search-results" class="search-results">
+                <div class="search-empty">Type to search for metrics, projects, documents, or skills...</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="./assets/js/portfolio-data.js"></script>
+    <script src="./assets/js/search-index.js"></script>
+    <script src="./assets/js/pdf-viewer.js"></script>
+    <script src="./assets/js/main.js"></script>
+
+    <!-- Page Specific Actions & Simulated Calendly -->
+    <script>
+        function hydrateContact() {
+            if (!portfolioData) return;
+
+            const c = portfolioData.contact;
+            document.getElementById('contact-email').innerText = c.email;
+            document.getElementById('contact-email').href = `mailto:${c.email}`;
+            document.getElementById('contact-phone').innerText = c.phone;
+            document.getElementById('contact-phone').href = `tel:${c.phone.replace(/\s+/g, '')}`;
+            document.getElementById('contact-linkedin').innerText = c.linkedin;
+            document.getElementById('contact-linkedin').href = `https://${c.linkedin}`;
+        }
+
+        function initCalendly() {
+            const calendarDays = document.getElementById('calendar-days');
+            if (!calendarDays) return;
+
+            // Generate calendar slots for June 2026
+            const daysInMonth = 30;
+            const startDayOffset = 1; // Tuesday start (offset 1)
+            
+            let daysHtml = '';
+            
+            // Blank space offsets
+            for(let i = 0; i < startDayOffset; i++) {
+                daysHtml += `<div class="calendly-mock-day inactive"></div>`;
+            }
+
+            for(let day = 1; day <= daysInMonth; day++) {
+                // Mock active slots on specific business weekdays
+                const isWeekend = (day % 7 === 5 || day % 7 === 6); // Friday/Saturday offset mock
+                const hasSlot = !isWeekend && (day % 3 === 0 || day % 4 === 0);
+                
+                if (hasSlot) {
+                    daysHtml += `<div class="calendly-mock-day active" data-day="${day}">${day}</div>`;
+                } else {
+                    daysHtml += `<div class="calendly-mock-day inactive">${day}</div>`;
+                }
+            }
+
+            calendarDays.innerHTML = daysHtml;
+
+            // Event bindings
+            const dayBtns = calendarDays.querySelectorAll('.active');
+            const timeSelector = document.getElementById('booking-time-selector');
+
+            dayBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    dayBtns.forEach(b => b.style.backgroundColor = 'var(--accent-light)');
+                    btn.style.backgroundColor = 'var(--accent)';
+                    btn.style.color = 'var(--secondary)';
+                    timeSelector.style.display = 'block';
+                    timeSelector.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                });
+            });
+
+            const timeBtns = timeSelector.querySelectorAll('.time-slot-btn');
+            timeBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    showToast("Briefing scheduled successfully! An invite has been dispatched to your corporate calendar.");
+                    timeSelector.style.display = 'none';
+                    dayBtns.forEach(b => {
+                        b.style.backgroundColor = '';
+                        b.style.color = '';
+                    });
+                });
+            });
+        }
+
+        function showToast(message, isSuccess = true) {
+            const toast = document.getElementById('form-toast');
+            const toastMsg = document.getElementById('toast-message');
+            
+            toastMsg.innerText = message;
+            toast.style.backgroundColor = isSuccess ? '#10B981' : '#EF4444';
+            toast.classList.add('show');
+            
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 4000);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            hydrateContact();
+            initCalendly();
+
+            // Contact Form Submit handler
+            const form = document.getElementById('portfolio-contact-form');
+            if (form) {
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    
+                    const submitBtn = form.querySelector('button[type="submit"]');
+                    const origText = submitBtn.innerText;
+                    
+                    // Loading State
+                    submitBtn.innerText = "Transmitting Inquiry...";
+                    submitBtn.disabled = true;
+
+                    setTimeout(() => {
+                        showToast("Inquiry successfully transmitted! Mayank's office will correspond shortly.");
+                        form.reset();
+                        submitBtn.innerText = origText;
+                        submitBtn.disabled = false;
+                    }, 1500);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

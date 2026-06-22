@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMS Admin Center | Mayank Yadav Portfolio</title>
+    <meta name="description" content="Static CMS admin editor and real-time configurator for Mayank Yadav's executive portfolio.">
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="./assets/css/variables.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/components.css">
+    <link rel="stylesheet" href="./assets/css/pages.css">
+</head>
+<body style="height:100vh;">
+
+    <!-- STICKY HEADER -->
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="logo-container">
+                <span class="logo-name" data-cms="hero-name">Mayank Yadav</span>
+                <span class="logo-title">CMS Admin Center</span>
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="launches.html" class="nav-link">Launches</a></li>
+                    <li><a href="revenue.html" class="nav-link">GTM & Revenue</a></li>
+                    <li><a href="product.html" class="nav-link">Product & Automation</a></li>
+                    <li><a href="research.html" class="nav-link">Research</a></li>
+                    <li><a href="demand.html" class="nav-link">Demand Gen</a></li>
+                    <li><a href="process.html" class="nav-link">Process</a></li>
+                    <li><a href="leadership.html" class="nav-link">Leadership</a></li>
+                    <li><a href="proof.html" class="nav-link">Evidence Vault</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-controls">
+                <button class="btn-control theme-toggle-btn" aria-label="Toggle Dark Mode" title="Toggle Theme">
+                    <!-- Icon loaded dynamically -->
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ADMIN GRID SHELL -->
+    <main class="admin-shell">
+        
+        <!-- EDITOR PANEL -->
+        <div class="admin-editor-panel">
+            <div class="admin-toolbar-cms">
+                <span style="font-weight:700; font-size:0.9rem;">CMS Settings Controller</span>
+                <div style="display:flex; gap:8px;">
+                    <button class="btn btn-secondary btn-sm" id="reset-data-btn" style="background:#dc2626; border-color:#dc2626; color:white;">Revert Defaults</button>
+                    <button class="btn btn-primary btn-sm" id="export-data-btn">Export Config File</button>
+                </div>
+            </div>
+
+            <!-- SECTION 1: HERO CONFIG -->
+            <div class="admin-form-section">
+                <h3 style="margin-bottom:12px; font-family:var(--font-heading); font-size:1.1rem; border-bottom:1px solid var(--border-color); padding-bottom:6px;">Section 1: Hero Identity</h3>
+                <div class="admin-input-group">
+                    <label for="edit-hero-name">Full Name</label>
+                    <input type="text" id="edit-hero-name">
+                </div>
+                <div class="admin-input-group">
+                    <label for="edit-hero-headline">Headline</label>
+                    <input type="text" id="edit-hero-headline">
+                </div>
+                <div class="admin-input-group">
+                    <label for="edit-hero-subheadline">Subheadline Areas (pipe separated)</label>
+                    <input type="text" id="edit-hero-subheadline">
+                </div>
+                <div class="admin-input-group">
+                    <label for="edit-hero-desc">Summary description</label>
+                    <textarea id="edit-hero-desc" rows="4"></textarea>
+                </div>
+            </div>
+
+            <!-- SECTION 2: METRICS CONFIG -->
+            <div class="admin-form-section">
+                <h3 style="margin-bottom:12px; font-family:var(--font-heading); font-size:1.1rem; border-bottom:1px solid var(--border-color); padding-bottom:6px;">Section 2: Impact Metrics</h3>
+                <div id="metrics-editor-container">
+                    <!-- Loaded dynamically -->
+                </div>
+            </div>
+
+            <!-- SECTION 3: LAUNCHES CONFIG -->
+            <div class="admin-form-section">
+                <h3 style="margin-bottom:12px; font-family:var(--font-heading); font-size:1.1rem; border-bottom:1px solid var(--border-color); padding-bottom:6px;">Section 3: Launches Case Studies</h3>
+                <div class="admin-input-group" style="margin-bottom:16px;">
+                    <label for="launch-select">Choose Launch Study to Modify</label>
+                    <select id="launch-select" style="width:100%;">
+                        <!-- Select options populated dynamically -->
+                    </select>
+                </div>
+                <div class="admin-input-group">
+                    <label for="edit-launch-title">Case Study Title</label>
+                    <input type="text" id="edit-launch-title">
+                </div>
+                <div class="admin-input-group">
+                    <label for="edit-launch-problem">Problem Statement</label>
+                    <textarea id="edit-launch-problem" rows="3"></textarea>
+                </div>
+                <div class="admin-input-group">
+                    <label for="edit-launch-approach">Strategic Approach</label>
+                    <textarea id="edit-launch-approach" rows="3"></textarea>
+                </div>
+                <div class="admin-input-group">
+                    <label for="edit-launch-revenue">Impact Brief</label>
+                    <textarea id="edit-launch-revenue" rows="3"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <!-- LIVE PREVIEW PANEL -->
+        <div class="admin-preview-panel">
+            <h3 style="font-family:var(--font-heading); font-size:1.1rem; border-bottom:1px solid var(--border-color); padding-bottom:6px;">Real-Time Preview Console</h3>
+            <div id="cms-live-preview" style="display:flex; flex-direction:column; gap:20px;">
+                <!-- Injected dynamically by JS -->
+            </div>
+            
+            <div class="admin-form-section" style="background:var(--accent-light); border-color:var(--accent); margin-top:auto;">
+                <span class="control-label" style="color:var(--accent); font-weight:700;">How to Deploy Changes Live</span>
+                <ol style="margin-left:16px; font-size:0.8rem; line-height:1.5; display:flex; flex-direction:column; gap:6px; margin-top:8px;">
+                    <li>Edit all values to your liking (saved locally instantly).</li>
+                    <li>Click <strong>Export Config File</strong> to download <code>portfolio-data.js</code>.</li>
+                    <li>Replace the old file in <code>assets/js/portfolio-data.js</code>.</li>
+                    <li>Commit and push to your GitHub Pages repository!</li>
+                </ol>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Scripts -->
+    <script src="./assets/js/portfolio-data.js"></script>
+    <script src="./assets/js/search-index.js"></script>
+    <script src="./assets/js/pdf-viewer.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/admin.js"></script>
+</body>
+</html>
